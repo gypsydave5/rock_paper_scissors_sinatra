@@ -1,6 +1,13 @@
 source 'http://rubygems.org'
-gem 'sinatra'
+ruby '2.1.2'
 
-gem 'rspec'
-gem 'capybara'
-gem 'cucumber-sinatra'
+gem 'sinatra'
+gem 'newrelic_rpm'
+
+group :test, :development do
+  gem 'capybara'
+  gem 'cucumber-sinatra'
+  gem 'rspec'
+  gem 'shotgun'
+  gem 'thin'
+end
