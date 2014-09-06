@@ -2,8 +2,11 @@ source 'http://rubygems.org'
 ruby '2.1.0'
 
 gem 'sinatra'
-gem 'newrelic_rpm'
 gem 'thin'
+
+group :production do
+  gem 'newrelic_rpm'
+end
 
 group :test, :development do
 	gem 'capybara'
