@@ -26,7 +26,6 @@ class RockPaperScissors < Sinatra::Base
 
   def generate_computer
   	choice = ["Rock","Paper","Scissors"].sample
-
   	comp = Player.new("computer")
   	comp.picks = choice
   	comp
