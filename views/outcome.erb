@@ -1,6 +1,6 @@
 	<% if @results == :scissors_paper %>
 		<div class="jumbotron" style="background: url(img/scissors.jpg) no-repeat center">
-		<h1 class="text-center">Scissors cut Paper</h1>
+		<h1 class="text-center">Scissors cuts Paper</h1>
 		</div>
 	<% elsif @results == :paper_rock %>
 		<div class="jumbotron" style="background: url(img/paper.jpg) no-repeat center">
@@ -17,6 +17,7 @@
 	<% elsif @results == :dino_scissors %>
 		<div class="jumbotron" style="background: url(img/dino1.jpg) no-repeat center">
 		<h1 class="text-center">Dino ignores the Scissors</h1>
+		<h2 class="text-center">(and has a drink)</h2>
 		</div>
 	<% elsif @results == :scissors_sinatra %>
 		<div class="jumbotron" style="background: url(img/sinatra_mug.jpg) no-repeat center">
@@ -29,10 +30,12 @@
 	<% elsif @results == :paper_dino %>
 		<div class="jumbotron" style="background: url(img/dino_drinks.jpg) no-repeat center">
 		<h1 class="text-center">Paper confuses Dino</h1>
+		<h2 class="text-center">(so he has a drink)</h2>
 		</div>
 	<% elsif @results == :dino_rock %>
 		<div class="jumbotron" style="background: url(img/dino2.jpg) no-repeat center">
 		<h1 class="text-center">Dino ignores the Rock</h1>
+		<h2 class="text-center">(and has a drink)</h2>
 		</div>
 	<% elsif @results == :rock_scissors %>
 		<div class="jumbotron" style="background: url(img/rock.jpg) no-repeat center">
@@ -40,9 +43,11 @@
 		</div>
 <% end %>
 <% if @results == :draw %>
-	<h1 class="text-center">It was a draw. You both used <%=@game.player1.pick%>. Who knew?</h1>
+	<div class="jumbotron" style="background: url(img/sammy.jpg) no-repeat center">
+	</div>
+	<h1 class="text-center">It was a draw. You both used <%=@game.player1.pick%>. Who knew.</h1>
 <% elsif @game.winner.name == "computer" %>
-	 <h1 class="text-center">Loserville, <%=@game.player1.name%>. The other guy went with <%= @game.winner.pick %></h1>
+	 <h1 class="text-center">Loserville. The other guy went with <%= @game.winner.pick %>.</h1>
 <% else %>
 <h1 class="text-center">Ring-a-ding! <%= @game.winner.pick.capitalize %> did it for you.</h1>
 <%end%>
