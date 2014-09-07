@@ -1,10 +1,40 @@
-RESULTS:
-<% if @game.winner == "Draw" %>
- <h1> it was a draw </h1>
- <% elsif @game.winner.name == "computer" %>
- <h1> You lost, the compute won with <%= @game.winner.pick %></h1>
+<p> <%= @results %> <%= @game.picks %> </p>
+	<% if @results == :scissors_paper %>
+		<h1 class="text-center">Scissors cut Paper</h1>
+	<% elsif @results == :paper_rock %>
+		<h1 class="text-center">Paper wraps Rock</h1>
+	<% elsif @results == :rock_sinatra %>
+		<h1 class="text-center">Rock annoys Sinatra</h1>
+	<% elsif @results == :sinatra_dino %>
+		<h1 class="text-center">Sinatra bosses Dino</h1>
+	<% elsif @results == :dino_scissors %>
+		<h1 class="text-center">Dino ignores the Scissors</h1>
+	<% elsif @results == :scissors_sinatra %>
+		<h1 class="text-center">Scissors cut up Sinatra's threads</h1>
+	<% elsif @results == :sinatra_paper %>
+		<h1 class="text-center">Sinatra tosses the Paper</h1>
+	<% elsif @results == :paper_dino %>
+		<h1 class="text-center">Paper confuses Dino</h1>
+	<% elsif @results == :dino_rock %>
+		<h1 class="text-center">Dino ignores the Rock</h1>
+	<% elsif @results == :rock_scissors %>
+		<h1 class="text-center">Rock blunts Scissors</h1>
+<% end %>
+<% if @results == :draw %>
+	<h1 class="text-center">It was a draw. You both used <%=@game.player1.pick%>. Who knew?</h1>
+<% elsif @game.winner.name == "computer" %>
+	 <h1 class="text-center">It's loseville, <%=@game.player1.name%>. The other guy went with <%= @game.winner.pick %></h1>
 <% else %>
-<h1> You won, with <%= @game.winner.pick %> </h1>
+<h1 class="text-center">Ring-a-ding! You won with <%= @game.winner.pick %>.</h1>
 <%end%>
+<h2 class="text-center">You want some more?</h2>
+<form action="/register" method="POST">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4">
+	<button class="btn btn-lg btn-primary btn-block">Shoot</button>
+	<input type="hidden" name="name" value=<%=@game.player1.name%>>
+</div>
+	<div class="col-lg-4"></div>
+</form>
 
 

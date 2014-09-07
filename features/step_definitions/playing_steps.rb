@@ -7,7 +7,7 @@ When(/^I enter my name$/) do
 end
 
 Then(/^I should be ready to play$/) do
-  expect(page).to have_content("Welcome")
+  expect(page).to have_content("OK then")
 end
 
 Given(/^I've registered to play$/) do
@@ -18,3 +18,7 @@ end
 When(/^I choose (.*?)$/) do |something|
   click_button(something)
 end
+
+#When(/^the computer pick (.*?)$/) do |something|
+	#allow(GAME.player2).to receive(:pick).and_return("Scissors")
+#end
