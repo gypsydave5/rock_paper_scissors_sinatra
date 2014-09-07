@@ -1,31 +1,50 @@
-<p> <%= @results %> <%= @game.picks %> </p>
 	<% if @results == :scissors_paper %>
+		<div class="jumbotron" style="background: url(img/scissors.jpg) no-repeat center">
 		<h1 class="text-center">Scissors cut Paper</h1>
+		</div>
 	<% elsif @results == :paper_rock %>
+		<div class="jumbotron" style="background: url(img/paper.jpg) no-repeat center">
 		<h1 class="text-center">Paper wraps Rock</h1>
+		</div>
 	<% elsif @results == :rock_sinatra %>
+		<div class="jumbotron" style="background: url(img/sinatra_headphones.jpg) no-repeat center">
 		<h1 class="text-center">Rock annoys Sinatra</h1>
+		</div>
 	<% elsif @results == :sinatra_dino %>
-		<h1 class="text-center">Sinatra bosses Dino</h1>
+		<div class="jumbotron" style="background: url(img/sinatra_dino.jpg) no-repeat center">
+			<h1 class="text-center">Sinatra bosses Dino</h1>
+		</div>
 	<% elsif @results == :dino_scissors %>
+		<div class="jumbotron" style="background: url(img/dino1.jpg) no-repeat center">
 		<h1 class="text-center">Dino ignores the Scissors</h1>
+		</div>
 	<% elsif @results == :scissors_sinatra %>
+		<div class="jumbotron" style="background: url(img/sinatra_mug.jpg) no-repeat center">
 		<h1 class="text-center">Scissors cut up Sinatra's threads</h1>
+		</div>
 	<% elsif @results == :sinatra_paper %>
-		<h1 class="text-center">Sinatra tosses the Paper</h1>
+		<div class="jumbotron" style="background: url(img/frankie_paper.jpg) no-repeat center">
+		<h1 class="text-center">Sinatra is in Paper</h1>
+		</div>
 	<% elsif @results == :paper_dino %>
+		<div class="jumbotron" style="background: url(img/dino_drinks.jpg) no-repeat center">
 		<h1 class="text-center">Paper confuses Dino</h1>
+		</div>
 	<% elsif @results == :dino_rock %>
+		<div class="jumbotron" style="background: url(img/dino2.jpg) no-repeat center">
 		<h1 class="text-center">Dino ignores the Rock</h1>
+		</div>
 	<% elsif @results == :rock_scissors %>
+		<div class="jumbotron" style="background: url(img/rock.jpg) no-repeat center">
 		<h1 class="text-center">Rock blunts Scissors</h1>
+		</div>
 <% end %>
 <% if @results == :draw %>
 	<h1 class="text-center">It was a draw. You both used <%=@game.player1.pick%>. Who knew?</h1>
 <% elsif @game.winner.name == "computer" %>
-	 <h1 class="text-center">It's loseville, <%=@game.player1.name%>. The other guy went with <%= @game.winner.pick %></h1>
+	 <h1 class="text-center">Loserville, <%=@game.player1.name%>. The other guy went with <%= @game.winner.pick %></h1>
 <% else %>
-<h1 class="text-center">Ring-a-ding! You won with <%= @game.winner.pick %>.</h1>
+<h1 class="text-center">Ring-a-ding! <%= @game.winner.pick.capitalize %> did it for you.</h1>
 <%end%>
 <h2 class="text-center">You want some more?</h2>
 <form action="/register" method="POST">
