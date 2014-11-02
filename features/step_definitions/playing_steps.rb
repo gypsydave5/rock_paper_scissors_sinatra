@@ -12,7 +12,7 @@ end
 
 Given(/^I've registered to play$/) do
   visit '/new-game'
-  click_button "Play!"
+  click_button "Play"
 end
 
 When(/^I choose (.*?)$/) do |something|

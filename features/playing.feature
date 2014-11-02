@@ -7,7 +7,7 @@ Scenario: A player can register
 	Given I am on the homepage
 	When I click "New Game"
 	And I enter my name
-	When I press "Play!"
+	When I press "Play"
 	Then I should be ready to play
 
 #How do I dummy results in Cucumber?
@@ -29,8 +29,8 @@ Scenario: A player is playing
 
 Scenario: A player is playing
 	Given I've registered to play
-	When I choose Deano
-  Then I should see "Deano"
+	When I choose Dino
+  Then I should see "Dino"
 
 Scenario: A player is playing
 	Given I've registered to play

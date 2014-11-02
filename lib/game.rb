@@ -4,7 +4,7 @@ class Game
 		@player1 = player1
 		@player2 = player2
 		@players = [@player1, @player2]
-		@picks = [normalize(@player1.pick), normalize(@player2.pick)].sort
+		@picks = []#[normalize(@player1.pick), normalize(@player2.pick)].sort
 	end
 
 	BEATS = {rock: [:scissors, :sinatra], scissors: [:paper, :sinatra], paper: [:rock,:dino], sinatra: [:paper, :dino], dino: [:scissors, :rock]}
