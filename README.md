@@ -3,7 +3,6 @@
 
 #Rock, Paper, Scissors, Sinatra (and Dino)
 _A classy game for solid players_
--------------------------------------------------------------
 
 !['Title Page'](http://gypsydave5.github.io/images/readme/rpssd-1.png)
 
@@ -21,7 +20,7 @@ Technologies Used
 -----------------
 
 + Production
-    - [Boostrap]
+    - [Bootstrap]
     - [CSS]
     - [ERB]
     - [HTML]
@@ -104,3 +103,4 @@ $ cucumber
 [Twitter Bootstrap]: http://getbootstrap.com/
 [Bootstrap]: http://getbootstrap.com/
 [New Relic]: https://newrelic.com/
+
