@@ -5,6 +5,8 @@
 _A classy game for solid players_
 -------------------------------------------------------------
 
+!['Title Page'](http://gypsydave5.github.io/images/readme/rpssd-1.png)
+
 ####Overview
 An implementation of [Rock-paper-scissors-lizard-Spock], only with Sinatra and
 Dino making an appearance. As is only fair if we're using [Sinatra](http://www.sinatrarb.com/)
