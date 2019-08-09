@@ -1,12 +1,12 @@
 | [*Makers Academy*](http://www.makersacademy.com) | Week 5 |
 | ------------------------------------------------ | ------ |
 
-#Rock, Paper, Scissors, Sinatra (and Dino)
+# Rock, Paper, Scissors, Sinatra (and Dino)
 _A classy game for solid players_
 
 !['Title Page'](http://gypsydave5.github.io/images/readme/rpssd-1.png)
 
-####Overview
+#### Overview
 An implementation of [Rock-paper-scissors-lizard-Spock], only with Sinatra and
 Dino making an appearance. As is only fair if we're using [Sinatra](http://www.sinatrarb.com/)
 to run ther server. We've not learned about databases by this point so - no
